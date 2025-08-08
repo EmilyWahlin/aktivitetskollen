@@ -1,14 +1,19 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000;
+  --background: #fff;
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #e5e7eb;
+    --background: #1e293b;
+    --button-primary-hover: #334155;
+    --button-secondary-hover: #0f172a;
   }
 }
+
 
 html,
 body {
