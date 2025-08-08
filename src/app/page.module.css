@@ -1,7 +1,6 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --foreground: #000;
+  --background: #fff;
 
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
@@ -14,16 +13,16 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
   .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+    --foreground: #e5e7eb;           
+    --background: #1e293b;           
+    --button-primary-hover: #334155; 
+    --button-secondary-hover: #0f172a;
   }
 }
 
@@ -56,6 +55,26 @@
   font-weight: 600;
 }
 
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--foreground, #000);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+  max-width: 600px;
+  color: #4b5563; 
+
+  @media (prefers-color-scheme: dark) {
+    color: #cbd5e1; 
+  }
+}
+
+
+
 .ctas {
   display: flex;
   gap: 16px;
@@ -84,11 +103,15 @@ a.primary {
   background: var(--foreground);
   color: var(--background);
   gap: 8px;
+  font-size: 18px;
+  padding: 12px 24px;
 }
 
 a.secondary {
   border-color: var(--gray-alpha-200);
   min-width: 158px;
+  font-size: 18px;
+  padding: 12px 24px;
 }
 
 .footer {
